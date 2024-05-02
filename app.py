@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
 app.json.sort_keys = False
+CORS(app)
 
 resume = {
     "name": "Chirag Barbhaya", 
